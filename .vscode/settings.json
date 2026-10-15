@@ -1,0 +1,8 @@
+{
+  "search.exclude": {
+    "data/*.txt": true
+  },
+  "files.watcherExclude": {
+    "data/*.txt": true
+  }
+}

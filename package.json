@@ -6,6 +6,7 @@
   "scripts": {
     "data:process": "bun src/cleaning/index.ts",
     "data:chunk": "bun src/chunking/index.ts",
+    "data:embed": "bun src/embedding/index.ts",
     "search": "bun src/search/query.ts"
   },
   "devDependencies": {

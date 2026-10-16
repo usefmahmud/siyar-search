@@ -1,8 +1,10 @@
 {
   "search.exclude": {
-    "data/*.*": true
+    "**/*.jsonl": true,
+    "**/*.txt": true
   },
   "files.watcherExclude": {
-    "data/*.*": true
+    "**/*.jsonl": true,
+    "**/*.txt": true
   }
 }

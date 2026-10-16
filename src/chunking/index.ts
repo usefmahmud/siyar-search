@@ -4,7 +4,7 @@ import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { once } from "node:events";
 import { buildChunks } from "./chunker.ts";
-import { embedSentences } from "./embeddings.ts";
+import { embedSentences } from "../embedding/client.ts";
 import { countTokensForSentences } from "./tokenizer.ts";
 import type {
   ChunkOptions,

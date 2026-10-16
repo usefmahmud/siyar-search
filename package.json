@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "data:process": "bun src/cleaning/index.ts"
+    "data:process": "bun src/cleaning/index.ts",
+    "data:chunk": "bun src/chunking/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -13,6 +14,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
     "openai": "^7.34.0",
     "zod": "^4.6.7"
   }

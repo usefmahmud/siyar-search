@@ -80,13 +80,19 @@ try {
   for await (const paragraph of parseParagraphs(inputPath)) {
     index++;
 
+    const normalizedText = normalizeText(paragraph.text);
+
     const record = {
       id: `${bookId}:para:${String(index).padStart(6, "0")}`,
       book_id: bookId,
       paragraph_index: index,
       title: paragraph.title,
       text: paragraph.text,
-      normalized_text: normalizeText(paragraph.text),
+      normalized_text: normalizedText,
+      sentences: normalizedText
+        .split(".")
+        .map((sentence) => sentence.trim())
+        .filter(Boolean),
     };
 
     if (!output.write(`${JSON.stringify(record)}\n`)) {
